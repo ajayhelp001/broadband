@@ -1,0 +1,364 @@
+@media screen and (min-width: 1500px) {
+    .container{
+        max-width: 1440px;
+    }
+}
+@media screen and (max-width: 1399.98px) {
+    
+}
+@media screen and (max-width: 1199.98px) {
+    h1{
+        font-size: 55px;
+        line-height: 65px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .section-spacing{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .sub-heading {
+        margin-bottom: 15px;
+    }
+    
+    // who-section
+    .who-section {
+        & .user-group{
+            margin: 0px auto 50px;
+            padding: 0px 45px 0px 45px;
+        }
+        & .content-side {
+            padding: 0px;
+        }
+    }
+    // counter-section
+    .counter-section{
+        & .counter-card {
+            & .counter-item {
+                padding: 40px 30px;
+                & .counter-item-icon {
+                    width: 60px;
+                }
+                & .text {
+                    & .counts {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+    // brands-section
+    .brands-section{
+        &::before{
+            width: 110px;
+            height: 56px;
+        }
+    }
+}
+@media screen and (max-width: 991.98px) {
+    h2{
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    // 
+    .video-btn {
+        width: 60px;
+        height: 60px;
+        & img {
+            max-width: 25px;
+            margin-right: -4px;
+        }
+    }
+    // benifits-section 
+    .benifits-section {
+        & .watch-tv {
+            margin-top: 40px;
+        }
+    }
+    // counter-section
+    .counter-section{
+        & .counter-card {
+            grid-template-columns: repeat(2, 1fr);
+            & .counter-item {
+                &:nth-of-type(2){
+                    border-right-width: 1px;
+                }
+                &:nth-of-type(1), &:nth-of-type(2){
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+    // package-section {
+    .package-section {
+        & .package-card {
+            margin-top: 50px;
+            & .plan-item {
+                padding: 40px 10px;
+                & .plan-price {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+        // testimonial-section
+        .testimonial-section {
+            & .testimonial-card {
+                margin-top: 40px;
+            }
+        }
+}
+@media screen and (max-width: 767.98px) {
+    h1{
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .hero-section{
+        // height: unset;
+        min-height: 600px;
+    }
+    .section-spacing{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h5{
+        font-size: 16px;
+    }
+     // who-section
+    .who-section {
+        & .user-group{
+            margin: 0px auto 40px;
+            padding: 0px 40px 0px 40px;
+            &::before{
+                right: 0px;
+                width: 6px;
+                height: 100px;
+            }
+            & .best-internet {
+                padding: 10px 15px;
+                &::before{
+                    border-top: 30px solid $theme1;
+                    border-left: 40px solid transparent;
+                }
+                & img {
+                    max-width: 30px;
+                    margin: 0px auto 8px;
+                }
+            }
+        }
+        & .content-side {
+            & .list{
+                margin: 30px 0px 40px;
+            }
+        }
+    }
+    
+    // ott-section
+    .ott-section {
+        & .ott-img{
+            padding: 0px 30px;
+        }
+        & .themebtn{
+            margin-top: 40px;
+        }
+    }
+
+    // faq-section
+    .faq-section {
+        & .faq-card {
+            & .accordion {
+                & .accordion-item {
+                    & .accordion-header {
+                        & .accordion-button {
+                            font-size: var(--fs-18);
+                            padding: 25px 0px;
+                        }
+                    }
+                    & .accordion-collapse {
+                        & .accordion-body {
+                            padding: 25px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // package-section {
+        .package-section {
+            padding-left: 20px;
+            padding-right: 20px;
+            &>div{
+                padding: 40px 20px;
+            }
+            & .package-card {
+                flex-wrap: wrap;
+                & .plan-item {
+                    flex: 1 1 100%;
+                    width: 100%;
+                    padding: 40px 10px;
+                    &:not(:first-child){
+                        &::after{
+                            width: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    & .plan-price {
+                        font-size: 35px;
+                    }
+                    &:last-child{
+                        border-bottom: 0px;
+                    }
+                }
+            }
+        }
+}
+@media screen and (max-width: 575.98px) {
+    h1{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .hero-section {
+        & .slider{
+            & .item {
+                padding: 162px 0px 125px;
+                & .sub-titile {
+                    font-size: var(--fs-14);
+                    margin-bottom: 15px;
+                }
+            }
+            & .owl-nav {
+                gap: 10px;
+                & button {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+    .speedarea {
+        & .speedcard {
+            padding: 25px;
+            & .top-heading {  
+                & .network-icon {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .heading {
+        margin-bottom: 20px;
+    }
+    .sub-heading {
+        margin-bottom: 10px;
+    }
+    // who-section
+    .who-section {
+        & .user-group{
+            padding: 0px 40px 0px 20px;
+            &::before{
+                right: 0px;
+                top: 0;
+                width: 4px;
+                height: 80px;
+            }
+            & .best-internet {
+                top: 20px;
+                &::before{
+                    border-top: 15px solid $theme1;
+                    border-left: 20px solid transparent;
+                }
+            }
+        }
+        & .content-side {
+            & .list{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    // counter-section
+    .counter-section{
+        & .counter-card {
+            & .counter-item {
+                padding: 30px 10px;
+                & .counter-item-icon {
+                    width: 45px;
+                }
+                & .text {
+                    & .counts {
+                        font-size: 35px;
+                    }
+                    & .title {
+                        font-size: var(--fs-14);
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    // testimonial-section
+    .testimonial-section {
+        & .testimonial-card {
+            // margin-top: 0px;
+            padding: 30px;
+            border-radius: 0px;
+            & .clientcard {
+                padding: 30px 20px 20px;
+                & .client-image {
+                    width: 80px;
+                    height: 80px;
+                }
+                & .discription {
+                    & .rating {
+                        & li {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+                & .social-icon {
+                    position: unset;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 20px;
+                    & li {
+                        & a {
+                            width: 30px;
+                            height: 30px;
+                            padding: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // brands-section
+    .brands-section{
+        &::before{
+            top: 10px;
+            width: 80px;
+            height: 40px;
+        }
+        &::after{
+            bottom: -60px;
+            left: -60px;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
