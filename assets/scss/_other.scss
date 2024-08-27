@@ -456,7 +456,7 @@
         font-size: var(--fs-16);
         font-weight: var(--fw-300);
         line-height: 30px;
-        color: $white;
+        color: darken($white, 15);
         border-radius: 4px;
         background-color: $black;
         text-align: center;
@@ -906,7 +906,7 @@
     }
     & .details-img {
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         & .admin{
             position: absolute;
             right: 0;
@@ -953,7 +953,6 @@
     & .post-info {
         display: flex;
         align-items: center;
-        justify-content: center;
         & li {
             display: flex;
             align-items: center;
@@ -1011,19 +1010,20 @@
     & .blog-info-title {
         color: $theme1;
         display: inline-block;
-        margin: 20px 0px;
+        margin: 35px 0px 20px;
     }
     & .best-service {
         padding: 30px;
         background-color: $black;
     }
     & .best-service ,  & .news-user, & .quote{
-        margin-bottom: 15px;
+        margin: 30px 0px 15px;
     }
     & .news-user {
         display: flex;
         align-items: center;
-        gap: 30px;
+        column-gap: 30px;
+        row-gap: 20px;
         & .user-imgs {
             overflow: hidden;
             transition: all ease-in-out 0.3s;
@@ -1052,7 +1052,7 @@
         }
     }
     & .author-card {
-        margin: 30px 0px 0px;
+        margin: 60px 0px 0px;
         background-color: rgba($black, 0.9);
     }
     & .author-box {
@@ -1100,7 +1100,6 @@
             }
         }
         & p {
-            color: $white;
             font-size: var(--fs-18);
             line-height: 33px;
             margin: 0px;
@@ -1143,6 +1142,9 @@
     }
     & .discription-content:has(+ .blog-info-title) {
         padding-bottom: 0px;
+    }
+    & p {
+        color: darken($white, 30);
     }
     
 }
@@ -1531,9 +1533,6 @@
             line-height: 40px;
             margin-bottom: 20px;
         }
-        & .details-img {
-            margin-bottom: 30px;
-        }
         & .author-box {
             padding: 30px;
             & p {
@@ -1683,7 +1682,7 @@
             left: -100px;
         }
         & .navtab-content{
-            margin: 0px 0px 40px;
+                margin: 0px 0px 50px;
         }
         & .heading{
             font-size: 26px;
@@ -1797,9 +1796,6 @@
     }
     // ------ Blog Details ------
     .blog-details {
-        & .navtab-content{
-            margin: 0px 0px 30px;
-        }
         & .heading{
             font-size: 22px;
             line-height: 32px;
@@ -1816,7 +1812,7 @@
             }
         }
         & .blog-aside {
-            gap: 20px;
+            // gap: 20px;
         }
         & .tags {
             gap: 10px;
@@ -1843,13 +1839,16 @@
             }
         }
         & .blog-info-title {
-            margin: 20px 0px 15px;
+            margin: 25px 0px 15px;
         }
         & .best-service {
             row-gap: 15px;
         }
         & .news-user {
             flex-direction: column;
+        }
+        & .best-service ,  & .news-user, & .quote{
+            margin: 20px 0px 15px;
         }
         & .author-box {
             padding: 30px;
@@ -1982,6 +1981,11 @@
                 justify-content: center;
                 border-top: 0px;
                 padding-top: 0px;
+            }
+            & .author-details {
+                & p{
+                    text-align: center;
+                }
             }
             & .social-icon {
                 margin-top: 20px;
