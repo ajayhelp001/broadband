@@ -1801,7 +1801,6 @@
             line-height: 32px;
         }
         & .details-img {
-            margin-bottom: 20px;
             & .admin{
                 padding: 10px 26px;
             }
@@ -1839,7 +1838,7 @@
             }
         }
         & .blog-info-title {
-            margin: 25px 0px 15px;
+            margin: 30px 0px 15px;
         }
         & .best-service {
             row-gap: 15px;
@@ -1848,7 +1847,7 @@
             flex-direction: column;
         }
         & .best-service ,  & .news-user, & .quote{
-            margin: 20px 0px 15px;
+            margin: 25px 0px 15px;
         }
         & .author-box {
             padding: 30px;
@@ -1955,6 +1954,7 @@
         }
         & .post-info {
             flex-wrap: wrap;
+            justify-content: center;
             & li {
                 & a {
                     font-size: var(--fs-14);
