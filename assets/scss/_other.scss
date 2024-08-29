@@ -47,9 +47,6 @@
         text-align: center;
         & .breadcrumb {
             display: inline-flex;
-            background-color: $theme1;
-            padding: 10px;
-            border-radius: 50px;
             justify-content: center;
             gap: 10px;
             & .breadcrumb-item , & .breadcrumb-item a{
@@ -59,32 +56,40 @@
                 color: $white;
             }
             & .breadcrumb-item{
-                padding: 10px 25px;
-                border-radius: 30px;
+                padding: 4px 15px;
                 display: flex;
+                position: relative;
                 &:not(.active){
                     padding: 0px;
                     & a {
-                        padding: 10px 25px;
-                        border-radius: 30px;
-                        background-color: rgba($black, 0.2);
+                        padding: 4px 15px;
                     }
                 }
                 &.active{
-                    color: rgba($white, 0.8);
-                    position: relative;
-                    &::before{
-                        display: none;
-                    }
-                    background-color: $black;
+                    color: $theme1;
+                    // background-color: $black;
                 }
                 & a {
                     &:hover{
-                        background-color: $black;
+                        color: $theme1;
+                    }
+                }
+                &:first-child{
+                    &::before{
+                        display: none;
                     }
                 }
                 &::before{
-                    display: none;
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    top: 50%;
+                    padding: 0px;
+                    transform: translateY(-50%);
+                    left: -17px;
+                    background: url('data:image/svg+xml,<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M256 405.334C251.763 405.359 247.614 404.121 244.083 401.778C240.552 399.436 237.799 396.095 236.174 392.182C234.549 388.268 234.126 383.959 234.96 379.805C235.793 375.65 237.845 371.838 240.854 368.854L353.92 256.001L240.854 143.147C237.359 139.066 235.532 133.817 235.74 128.447C235.947 123.078 238.173 117.985 241.972 114.186C245.772 110.387 250.865 108.161 256.234 107.953C261.603 107.746 266.853 109.572 270.934 113.067L398.934 241.067C402.907 245.064 405.137 250.471 405.137 256.107C405.137 261.743 402.907 267.15 398.934 271.147L270.934 399.147C266.96 403.088 261.597 405.31 256 405.334Z" fill="white"/><path d="M128 405.334C123.763 405.359 119.614 404.121 116.083 401.778C112.552 399.436 109.799 396.095 108.174 392.182C106.549 388.268 106.126 383.959 106.96 379.805C107.793 375.65 109.845 371.838 112.854 368.854L225.92 256.001L112.854 143.147C108.837 139.13 106.58 133.682 106.58 128.001C106.58 122.32 108.837 116.871 112.854 112.854C116.871 108.837 122.319 106.58 128 106.58C133.681 106.58 139.13 108.837 143.147 112.854L271.147 240.854C275.12 244.851 277.351 250.258 277.351 255.894C277.351 261.53 275.12 266.937 271.147 270.934L143.147 398.934C141.171 400.95 138.815 402.553 136.215 403.652C133.615 404.751 130.823 405.322 128 405.334Z" fill="white"/></svg>') no-repeat center;
+                    background-size: contain;
                 }
             }
         }
@@ -904,6 +909,11 @@
         font-size: 38px;
         line-height: 50px;
     }
+    &.policy-page{
+        & .heading{
+            font-weight: var(--fw-700);
+        }
+    }
     & .details-img {
         position: relative;
         margin-bottom: 15px;
@@ -1138,7 +1148,15 @@
         }
     }
     & .discription-content {
-        padding-bottom: 30px;
+        &:not(:last-child){
+            padding-bottom: 35px;
+        }
+        & .subtitle:not(:first-child){
+            margin: 20px 0px 10px;
+        }
+        & p {
+            margin-bottom: 15px;
+        }
     }
     & .discription-content:has(+ .blog-info-title) {
         padding-bottom: 0px;
@@ -1599,10 +1617,10 @@
                     font-size: var(--fs-16);
                 }
                 & .breadcrumb-item{
-                    padding: 10px 20px;
+                    padding: 4px 10px;
                     &:not(.active){
                         & a {
-                            padding: 10px 20px;
+                            padding: 4px 10px;
                         }
                     }
                 }
